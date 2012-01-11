@@ -204,7 +204,9 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_domain_indices = True
-
+sys.path.append(os.path.abspath('_themes'))
+html_theme_path = ['_themes']
+html_theme = 'flask'
 
 # -- Options for manual page output --------------------------------------------
 
