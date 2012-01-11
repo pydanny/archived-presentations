@@ -2,7 +2,7 @@
 Intro to Python
 ===============
 
-:Info: An introspective interface for Django and Mongo.
+:Info: Your basic hour long introduction to the Python programming language.
 :Author: Daniel Greenfeld (http://github.com/pydanny)
 
 Upcoming
