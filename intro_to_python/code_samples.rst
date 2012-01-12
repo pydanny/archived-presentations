@@ -100,8 +100,35 @@ List Comprehension
 
 .. sourcecode:: python
 
-    >>> [x for x in range(20)]
+    >>> items = [x for x in range(20)]
+    >>> items
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    
+Generator Expressions
+=====================
+
+.. sourcecode:: python
+
+    >>> items = (x for x in range(20))
+    >>> items
+    <generator object <genexpr> at 0x100721460>
+    
+A generator expression evaluates only when the pointer is looking at that object.
+This is really powerful, especially when working with resource/time intensive items
+within an iterable.
+
+.. sourcecode:: python
+
+    >>> from time import sleep
+    >>> items = ((x, sleep(x)) for x in range(20))
+    >>> items.next()
+    (0, None)
+    >>> items.next()
+    (1, None)
+    >>> items.next()
+    (2, None)
+    >>> items.next()            
+    (3, None)
 
 Pygments
 =========
