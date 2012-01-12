@@ -87,5 +87,6 @@ Slides TOC
 #. Generate the code coloration used in these slides.
 
     * http://pygments.org/
-    
+    * Show demo
+    * Mention that both bitbucket and github use Pygments to colorize code.
     

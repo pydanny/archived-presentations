@@ -130,7 +130,7 @@ First get the pygments code::
             """.format(css=css, highlighted_code=highlighted_code)
         print(page)
 
-Now run the program::
+Now run the program and check the results::
 
     python pygments_demo.py > text.html
     open text.html
