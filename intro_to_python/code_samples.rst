@@ -95,21 +95,42 @@ code::
      |      string S[start:end].  Optional arguments start and end are interpreted
      |      as in slice notation.
 
-Integers
-========
+List Comprehension
+====================
 
 .. sourcecode:: python
 
-    >>> answer = 42
-    >>> answer
-    42
-    >>> answer + answer
-    84
-    >>> answer / 7
-    6
-    >>> >>> answer + fun
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-    TypeError: unsupported operand type(s) for +: 'int' and 'str'
-    
-TODO - note that Python is not loosely typed
+    >>> [x for x in range(20)]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+Pygments
+=========
+
+First get the pygments code::
+
+    pip install pygments
+
+.. sourcecode:: python
+
+    from pygments import highlight
+    from pygments.lexers import get_lexer_by_name
+    from pygments.formatters import HtmlFormatter
+
+    if __name__ == '__main__':
+        code = open("pygments_demo.py", "rw").read()
+        lexer = get_lexer_by_name("python", stripall=True)
+        formatter = HtmlFormatter(linenos=False, cssclass="source")
+        css = HtmlFormatter().get_style_defs('.source')
+        highlighted_code = highlight(code, lexer, formatter)        
+        page = """
+            <html>
+                <head><style>{css}</style></head>
+                <body>{highlighted_code}</body>
+            </html>
+            """.format(css=css, highlighted_code=highlighted_code)
+        print(page)
+
+Now run the program::
+
+    python pygments_demo.py > text.html
+    open text.html

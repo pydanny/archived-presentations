@@ -47,12 +47,6 @@ Slides TOC
 * Which Python to use?
 
 * 20 Cool things you can do with Python
-
-#. Introspect
-
-    * String basic type
-    * dir
-    * help
     
 #. Learn it fast
 
@@ -60,15 +54,38 @@ Slides TOC
     * Java takes 6 months
     * C takes 2 years
     
+#. Introspect
+
+    * String basic type
+    * dir
+    * help    
+
 #. Express yourself to laymen
 
-    * Don't know Python?
+    * Don't know Python? Bet you can read this!
     
-* Basic language constructs
+#. Play with the REPL
 
-    * strings
-    * help diversion
-    * Integers
-    * Lists, Tuples, and Sets
-    * Dictionaries
-    * control flow
+    * Standard python shell
+    * ipython
+    * bpython
+
+#. List Comprehension
+
+    * [x for x in range(60)]
+    * List Generators for ultimate power
+    
+#. Create small, isolated environments for installing packages
+
+    * Good for testing different versions of the same library::
+    
+    easy_install pip
+    pip install virtualenv    
+    virtualenv my_env
+    source my_env/bin/activate
+    
+#. Generate the code coloration used in these slides.
+
+    * http://pygments.org/
+    
+    
