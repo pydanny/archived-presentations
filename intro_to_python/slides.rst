@@ -38,6 +38,12 @@ Slides TOC
     
 * Core concepts
 
+    * Philosophy of Core devs
+    
+        * Conservative growth
+        * *We read Knuth so you don’t have to*
+        * Aim for simple implementation
+
     * Zen of Python
     
         * A few of my favorite lines
@@ -89,4 +95,6 @@ Slides TOC
     * http://pygments.org/
     * Show demo
     * Mention that both bitbucket and github use Pygments to colorize code.
+    
+#. 
     
