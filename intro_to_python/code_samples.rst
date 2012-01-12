@@ -32,7 +32,10 @@ String methods
     no Python documentation found for 'spam and EGGS   '
     >>> help(str)
 
-Help Slide Part I::
+Help Slide Part I
+==================
+
+code::
 
     Help on class str in module __builtin__:
 
@@ -55,7 +58,10 @@ Help Slide Part I::
      |  __contains__(...)
      |      x.__contains__(y) <==> y in x
 
-Help Slide Part II::
+Help Slide Part II
+==================
+
+code::
 
      |  capitalize(...)
      |      S.capitalize() -> string
@@ -76,3 +82,21 @@ Help Slide Part II::
      |      string S[start:end].  Optional arguments start and end are interpreted
      |      as in slice notation.
 
+Integers
+========
+
+.. sourcecode:: python
+
+    >>> answer = 42
+    >>> answer
+    42
+    >>> answer + answer
+    84
+    >>> answer / 7
+    6
+    >>> >>> answer + fun
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    TypeError: unsupported operand type(s) for +: 'int' and 'str'
+    
+TODO - note that Python is not loosely typed

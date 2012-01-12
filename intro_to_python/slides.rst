@@ -44,6 +44,7 @@ Slides TOC
 * Basic language constructs
 
     * strings
+    * help diversion
     * Integers
     * Lists, Tuples, and Sets
     * Dictionaries
