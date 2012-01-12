@@ -106,3 +106,9 @@ Slides TOC
     * http://speed.pypy.org/
     * Quora is the best known prominent user at this time
     * Integration with numpy and other scientific libraries in progress
+    
+#. Persist
+
+    * LRU caching
+    * Connect to SQL databases
+    * Connect to NoSQL
