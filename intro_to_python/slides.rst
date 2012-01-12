@@ -105,3 +105,4 @@ Slides TOC
     * http://en.wikipedia.org/wiki/PyPy
     * http://speed.pypy.org/
     * Quora is the best known prominent user at this time
+    * Integration with numpy and other scientific libraries in progress

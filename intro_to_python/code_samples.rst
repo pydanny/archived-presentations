@@ -110,6 +110,8 @@ First get the pygments code::
 
     pip install pygments
 
+Then run this simple 'recursive' program:
+
 .. sourcecode:: python
 
     from pygments import highlight
