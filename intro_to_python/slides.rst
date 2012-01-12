@@ -36,7 +36,10 @@ Slides TOC
 * Core concepts
 
     * Zen of Python
-    * A few of my favorite lines
+    
+        * A few of my favorite lines
+        
+    * PEP-8
     
 * Basic language constructs
 
