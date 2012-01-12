@@ -3,6 +3,9 @@ Slides TOC
 ==========
 
 * Opener
+
+    * Subtitle: 20 cool things you can do with Python
+    
 * Who am I
 
     * History
@@ -40,6 +43,17 @@ Slides TOC
         * A few of my favorite lines
         
     * PEP-8
+
+* Which Python to use?
+
+* 20 Cool things you can do with Python
+
+#. Introspect
+
+    * String basic type
+    * dir
+    * help
+
     
 * Basic language constructs
 
