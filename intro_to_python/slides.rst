@@ -96,5 +96,12 @@ Slides TOC
     * Show demo
     * Mention that both bitbucket and github use Pygments to colorize code.
     
-#. 
-    
+#. Go faster than Javascript
+
+    * Everyone knows Javascript is fast, right?
+    * PyPy, an implementation of Python written in Python, runs faster.   
+    * Faster than JavaScript, in some cases faster than C. 
+    * Benchmarks, et al
+    * http://en.wikipedia.org/wiki/PyPy
+    * http://speed.pypy.org/
+    * Quora is the best known prominent user at this time
