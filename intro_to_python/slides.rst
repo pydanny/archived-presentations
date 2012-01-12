@@ -53,7 +53,16 @@ Slides TOC
     * String basic type
     * dir
     * help
+    
+#. Learn it fast
 
+    * Experienced developers take a week to get competent
+    * Java takes 6 months
+    * C takes 2 years
+    
+#. Express yourself to laymen
+
+    * Don't know Python?
     
 * Basic language constructs
 
