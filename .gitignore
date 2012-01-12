@@ -27,26 +27,13 @@ coverage
 #Mr Developer
 .mr.developer.cfg
 
-# Django
-dev.db*
-*.log
-local_settings.py
-media/
-collected_static/
-dev_private.py
 
 # Local file cruft/auto-backups
 .DS_Store
 *~
 
 # Sphinx
-docs/_build
-docs/_static
-
-# PostgreSQL
-logfile
+_build
+_static
 
 .bundle
-*cn_env
-latest.dump
-celerybeat-schedule.db

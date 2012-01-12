@@ -206,7 +206,7 @@ latex_documents = [
 #latex_domain_indices = True
 sys.path.append(os.path.abspath('_themes'))
 html_theme_path = ['_themes']
-html_theme = 'flask'
+html_theme = 'kr'
 
 # -- Options for manual page output --------------------------------------------
 
