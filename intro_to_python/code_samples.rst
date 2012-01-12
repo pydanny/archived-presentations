@@ -7,7 +7,7 @@ Strings
 
 .. sourcecode:: python
 
-    >>> foo = 'bar'
+    >>> foo = 'bar' # TODO: strike-out in slides
     >>> spam = 'eggs'
     
 String methods
