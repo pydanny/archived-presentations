@@ -10,6 +10,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   
+   intro_to_python/index
 
 Indices and tables
 ==================
