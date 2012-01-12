@@ -21,3 +21,4 @@ Contents:
    :maxdepth: 2
    
    slides
+   code_samples

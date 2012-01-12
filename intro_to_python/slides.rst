@@ -1,6 +1,6 @@
-=======
-Slides
-=======
+==========
+Slides TOC
+==========
 
 * Opener
 * Who am I
