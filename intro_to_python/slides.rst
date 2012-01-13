@@ -96,14 +96,17 @@ Slides TOC
     * Show demo
     * Mention that both bitbucket and github use Pygments to colorize code.
     
-#. Go faster than Javascript
+#. Go faster than C and Javascript
 
-    * Everyone knows Javascript is fast, right?
+    * Everyone knows C is fast, right
+    * And JavaScript on V8 is really fast too.
     * PyPy, an implementation of Python written in Python, runs faster.   
     * Faster than JavaScript, in some cases faster than C. 
     * Benchmarks, et al
     * http://en.wikipedia.org/wiki/PyPy
     * http://speed.pypy.org/
+    * http://morepypy.blogspot.com/2012/01/numpypy-progress-report-running.html
+    * http://blog.bossylobster.com/2011/08/lesson-v8-can-teach-python-and-other.html
     * Quora is the best known prominent user at this time
     * Integration with numpy and other scientific libraries in progress
     
@@ -112,3 +115,5 @@ Slides TOC
     * LRU caching
     * Connect to SQL databases
     * Connect to NoSQL
+    
+#. Build websites
