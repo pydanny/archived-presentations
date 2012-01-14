@@ -192,7 +192,7 @@ List Comprehension
     >>> # Fizzbuzz solved using Python's List Comprehension
     >>> lst = [(x, 'Fizz', 'Buzz', 'FizzBuzz') \ 
     ...     [(not x % 3) | (not x % 5) << 1] for x in range(20)]
-    >>> for x in lst: print x
+    >>> for x in lst: print(x)
     FizzBuzz
     1
     2
@@ -286,3 +286,20 @@ code::
     $ virtualenv my_env
     $ source my_env/bin/activate
     (my_env) $ 
+    
+More code::
+
+    (my_env) $ pip install django==1.3.1
+    (my_env) $ pip install requests==0.9.1
+    (my_env) $ pip install mongoengine==0.5.2
+    (my_env) $ pip install celery==2.4.6
+    (my_env) $ pip install coverage==3.4
+    (my_env) $ pip freeze
+    celery==2.4.6
+    coverage==3.4
+    django==1.3.1
+    mongoengine==0.5.2
+    requests==0.9.1
+    (my_env) $ pip freeze > requirements.txt
+    ...
+    (another_env) $ pip install -r requirements.txt
