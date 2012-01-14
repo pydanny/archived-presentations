@@ -169,6 +169,15 @@ sourcecode:: python
     ['I', 'like', 'Python']
     >>> " ".join(lst)
     'I like Python'
+    >>> my_set, tpl = set(lst), tuple(lst)
+    >>> tpl
+    ('I', 'like', 'Python')
+    >>> my_set
+    set(['I', 'Python', 'like'])
+    >>> ">".join(tpl)
+    'I>like>Python'
+    >>> "!".join(my_set)
+    'I!Python!like'
 
 List Comprehension
 ====================
