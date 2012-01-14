@@ -10,18 +10,19 @@ Whitespace
     """ whitespace.py """
     from random import randrange
     
-    def generate_random_number(max=10):
-        return randrange(1, max+1)
+    def numberizer():
+        # Generate a random number from 1 to 10.
+        return randrange(1, 11)
         
-    number = generate_random_number()
+    number = numberizer()
     if number > 5:
         print("This number is big!")
         
     class RandomNumberHolder(object):
+        # Create and hold 20 random numbers using numberizer
         
         def __init__(self):
-        
-            self.numbers = [generate_random_number(x) for x in range(20)]
+            self.numbers = [numberizer(x) for x in range(20)]
             
     random_numbers = RandomNumberHolder()
 
