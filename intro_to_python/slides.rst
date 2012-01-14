@@ -81,6 +81,8 @@ Slides TOC
     * [x for x in range(60)]
     * List Generators for ultimate power
     
+#. Generate Exceptions
+    
 #. Create small, isolated environments for installing packages
 
     * Good for testing different versions of the same library::
