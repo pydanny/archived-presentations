@@ -31,7 +31,7 @@ Whitespace
 Zen of Python
 =============
 
-.. sourcecode:: 
+.. sourcecode:: python
 
     >>> import this
     The Zen of Python, by Tim Peters
