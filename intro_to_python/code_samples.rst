@@ -16,6 +16,14 @@ Whitespace
     number = generate_random_number()
     if number > 5:
         print("This number is big!")
+        
+    class RandomNumberHolder(object):
+        
+        def __init__(self):
+        
+            self.numbers = [generate_random_number(x) for x in range(20)]
+            
+    random_numbers = RandomNumberHolder()
 
 
 Strings
