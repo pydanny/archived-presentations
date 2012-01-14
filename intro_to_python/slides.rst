@@ -56,7 +56,7 @@ Slides TOC
     
 #. Learn it fast
 
-    * Experienced developers take a week to get competent
+    * Experienced developers take a week to get competent in Python
     * Java takes 6 months
     * C takes 2 years
     

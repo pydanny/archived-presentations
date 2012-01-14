@@ -2,6 +2,22 @@
 Code samples
 =============
 
+Whitespace
+==========
+
+.. sourcecode:: python
+
+    """ whitespace.py """
+    from random import randrange
+    
+    def generate_random_number(max=10):
+        return randrange(1, max+1)
+        
+    number = generate_random_number()
+    if number > 5:
+        print("This number is big!")
+
+
 Strings
 ========
 
