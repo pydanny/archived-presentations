@@ -106,7 +106,7 @@ Slides TOC
     
 #. Go faster than C and Javascript
 
-    * Everyone knows C is fast, right
+    * Everyone knows C is fast, right?
     * And JavaScript on V8 is really fast too.
     * PyPy, an implementation of Python written in Python, runs faster.   
     * Faster than JavaScript, in some cases faster than C. 
