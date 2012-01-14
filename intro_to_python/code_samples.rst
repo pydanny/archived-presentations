@@ -149,6 +149,26 @@ code::
      |      Return the number of non-overlapping occurrences of substring sub in
      |      string S[start:end].  Optional arguments start and end are interpreted
      |      as in slice notation.
+     
+Play with strings
+=================
+
+sourcecode:: python
+
+    >>> a = "I"
+    >>> b = "like"
+    >>> c = "Python"
+    >>> a + b + c
+    'IlikePython'
+    >>> "{0} {1} {2}".format(a, b, c)
+    'I like Python'
+    >>> "{a} {b} {c}".format(a=a, b=b, c=c)
+    'I like Python'
+    >>> lst = [a,b,c]
+    >>> lst
+    ['I', 'like', 'Python']
+    >>> " ".join(lst)
+    'I like Python'
 
 List Comprehension
 ====================

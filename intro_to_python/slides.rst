@@ -64,7 +64,13 @@ Slides TOC
 
     * String basic type
     * dir
-    * help    
+    * help  
+    
+#. Play with Strings
+
+    * Concatenation
+    * String formatting
+    * Join iterables
 
 #. Express yourself to laymen
 
