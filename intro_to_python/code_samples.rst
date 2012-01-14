@@ -252,3 +252,14 @@ Now run the program and check the results::
 
     python pygments_demo.py > text.html
     open text.html
+    
+Isolate Environments
+=====================
+
+code::
+
+    $ curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+    $ pip install virtualenv
+    $ virtualenv my_env
+    $ source my_env/bin/activate
+    (my_env) $ 
