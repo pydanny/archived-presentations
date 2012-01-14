@@ -84,7 +84,7 @@ Slides TOC
 
 #. List Comprehension
 
-    * [x for x in range(60)]
+    * [x for x in range(15)]
     * List Generators for ultimate power
     
 #. Generate Exceptions
