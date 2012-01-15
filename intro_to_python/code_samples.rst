@@ -438,7 +438,7 @@ Generators
 .. sourcecode:: python
 
     from itertools import count
- 
+
     def generate_primes(stop_at=0):
         primes = []
         for n in count(2):
@@ -449,8 +449,15 @@ Generators
                 if not n % p:
                     composite = True
                     break
-                elif p ** 2 > n: 
+                elif p ** 2 > n:
                     break
             if not composite:
                 primes.append(n)
                 yield n
+
+    primer = generate_primes()
+    print(primer)
+    print(primer.next())
+    print(primer.next())
+    for x in range(20):
+        print(primer.next())
