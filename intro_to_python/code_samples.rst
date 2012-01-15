@@ -437,27 +437,23 @@ Generators
 
 .. sourcecode:: python
 
-    from itertools import count
+    >>> def countdown(n):
+    ...     print("Counting down from {0}".format(n))
+    ...     while n > 0:
+    ...        yield n
+    ...        n -= 1
+            
+    >>> x = countdown(10)
+    >>> x
+    <generator object at 0x58490>
+    >>> x.next()
+    Counting down from 10
+    10
+    >>> x.next()
+    9
+    >>> x.next()
+    8
+    >>> x.next()
+    7
 
-    def generate_primes(stop_at=0):
-        primes = []
-        for n in count(2):
-            if 0 < stop_at < n:
-                return # raises the StopIteration exception
-            composite = False
-            for p in primes:
-                if not n % p:
-                    composite = True
-                    break
-                elif p ** 2 > n:
-                    break
-            if not composite:
-                primes.append(n)
-                yield n
-
-    primer = generate_primes()
-    print(primer)
-    print(primer.next())
-    print(primer.next())
-    for x in range(20):
-        print(primer.next())
+* http://www.dabeaz.com/generators/Generators.pdf
