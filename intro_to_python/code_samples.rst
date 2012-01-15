@@ -521,6 +521,36 @@ Basics
     
 Dictionaries
 ============
+
+Python dictionaries are mutable key/value stores. 
+
+.. sourcecode:: python
+
+    >>> data = {
+           'name':'Daniel Greenfeld',
+           'nickname':'pydanny',
+           'states_lived':['CA','KS','MD','NJ','VA','AD'],
+           'fiancee':'Audrey Roy'
+           }
+    >>> data['name']
+    'Daniel Greenfeld'
+    >>> data['nickname'] = 'audreyr'
+    >>> data['nickname']
+    'audreyr'
+    >>> data['nickname'] = 'pydanny'    
+    >>> data.keys()
+    ['fiancee', 'nickname', 'name', 'states_lived']
+    >>> data.get('fiancee')
+    'Audrey Roy'
+    >>> data.get('fiance')
+    None
+    >>> data.pop('fiancee')
+    'Audreyr'
+    >>> data
+    {'nickname': 'pydanny', 'name': 'Daniel Greenfeld', 'states_lived': ['CA', 'KS', 'MD', 'NJ', 'VA']}
+    >>> data['fiancee'] = 'Audreyr Roy'
+    >>> data
+    {'fiancee': 'Audrey Roy', 'nickname': 'pydanny', 'name': 'Daniel Greenfeld', 'states_lived': ['CA', 'KS', 'MD', 'NJ', 'VA', 'AD']}
     
 Work with JSON
 ==============
