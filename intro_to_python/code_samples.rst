@@ -390,3 +390,21 @@ Shell:
     False
     >>> result.ready()
     True
+    
+Exception Handling
+===================
+
+.. sourcecode:: python
+
+    >>> class CustomTypeError(Exception):
+    ...     pass
+        
+    >>> try:
+    ...     a = 1 + "Error"
+    >>> except TypeError as e:
+    ...     raise CustomTypeError(e.message)
+    Traceback (most recent call last):
+      File "<stdin>", line 4, in <module>
+    __main__.CustomTypeError: unsupported operand type(s) for +: 'int' and 'str'
+        
+    
