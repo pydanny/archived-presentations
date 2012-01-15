@@ -548,7 +548,7 @@ Python dictionaries are mutable key/value stores.
     'Audreyr'
     >>> data
     {'nickname': 'pydanny', 'name': 'Daniel Greenfeld', 'states_lived': ['CA', 'KS', 'MD', 'NJ', 'VA']}
-    >>> data['fiancee'] = 'Audreyr Roy'
+    >>> data['fiancee'] = 'Audrey Roy'
     >>> data
     {'fiancee': 'Audrey Roy', 'nickname': 'pydanny', 'name': 'Daniel Greenfeld', 'states_lived': ['CA', 'KS', 'MD', 'NJ', 'VA', 'AD']}
     
