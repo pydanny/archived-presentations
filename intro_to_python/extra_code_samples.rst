@@ -48,12 +48,44 @@ sourcecode:: python
 Generators
 ==========
 
-def print_5_lines(filename):
-    """ Prints the first 5 lines of the given file. """
-    my_file = open(filename)    # my_file is a generator expression
-    for i in range(5):
-        line = my_file.next()
-        print line
+sourcecode:: python
+
+    def print_5_lines(filename):
+        """ Prints the first 5 lines of the given file. """
+        my_file = open(filename)    # my_file is a generator expression
+        for i in range(5):
+            line = my_file.next()
+            print line
 
 This is useful for gigantic files, such as 100MB system logs.
 
+Filesystem tools
+================
+
+List all the .log files in a directory, including all subdirectories.
+
+sourcecode:: python
+
+    import os
+    import os.path
+
+    for dirpath, dirnames, filenames in os.walk("."):
+        for filename in [f for f in filenames if f.endswith(".log")]:
+            print os.path.join(dirpath, filename)
+
+Code taken from http://stackoverflow.com/questions/954504/how-to-get-files-in-a-directory-including-all-subdirectories
+
+Dealing with tarfiles
+=====================
+
+
+
+sourcecode:: python
+
+    >>> import tarfile
+    >>> baz = tarfile.open('baz.tgz')
+    >>> bar = tarfile.open(fileobj=baz.extractfile('bar.tgz'))
+    >>> bar.extractfile('bar/baz.txt').read()
+    'This is bar/baz.txt.\n'
+
+From http://stackoverflow.com/questions/3293809/how-to-walk-a-tar-gz-file-that-contains-zip-files-without-extraction
