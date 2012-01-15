@@ -78,7 +78,7 @@ Code taken from http://stackoverflow.com/questions/954504/how-to-get-files-in-a-
 Dealing with tarfiles
 =====================
 
-
+Open and read nested tarfiles, without having to write the extracted files to disk.
 
 sourcecode:: python
 
