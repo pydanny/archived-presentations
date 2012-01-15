@@ -463,7 +463,7 @@ Do things with Strings
 
 .. sourcecode:: python
 
-    >>> scale = 'Southern California Linux Exposition'
+    >>> scale = 'Southern California Linux Expo'
     >>> scale[0]
     'S'
     >>> scale[0:8]
@@ -475,12 +475,12 @@ Do things with Strings
       File "<input>", line 1, in <module>
     TypeError: 'str' object does not support item assignment    
     >>> scale.replace('Southern California','SoCal')
-    'SoCal Linux Exposition'
+    'SoCal Linux Expo'
     >>> scale 
-    'Southern California Linux Exposition'
+    'Southern California Linux Expo'
     >>> s = scale.replace('Southern California','SoCal')
     >>> s
-    'SoCal California Linux Exposition'
+    'SoCal California Linux Expo'
     >>> scale.startswith('Windows')
     False
     >>> scale.endswith('Windows')
