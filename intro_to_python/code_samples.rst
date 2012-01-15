@@ -582,7 +582,7 @@ Work with JSON
 Object-Oriented Programming
 ============================
 
-.. sourcecode::
+.. sourcecode:: python
 
     class Animal(object):
         def __init__(self, name):    # Constructor of the class
