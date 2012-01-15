@@ -350,7 +350,7 @@ Persist NoSQL
     class Comment(me.EmbeddedDocument):
         name = me.StringField(_('name'), max_length=100)    
         content = me.StringField(_('content'))
-        
+                
 Message Queues
 ===============
 
