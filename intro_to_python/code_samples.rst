@@ -359,7 +359,8 @@ dependencies::
     celery
     requests
 
-tasks.py
+tasks.py:
+
 .. sourcecode:: python
 
     import logging
@@ -380,6 +381,7 @@ tasks.py
                 logging.warning(msg)
 
 Shell:
+
 .. sourcecode:: python
 
     >>> from products.tasks import confirm_all_images
