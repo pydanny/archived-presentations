@@ -192,7 +192,8 @@ Sets dominate
 How is this useful? What about counting unique words in a paragraph?
 
     >>> address = """Four score and seven years ago our fathers brought forth on this continent a new nation..."""
-    >>> address = address.replace(',','').replace('.','').replace('-','')
+    >>> for r in [',','.','-']:
+    ...     address = address.replace(r,'')
     >>> words = address.split(' ')
     >>> len(words)
     278
