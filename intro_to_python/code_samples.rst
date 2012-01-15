@@ -303,3 +303,49 @@ More code::
     (my_env) $ pip freeze > requirements.txt
     ...
     (another_env) $ pip install -r requirements.txt
+
+Persist SQL 
+====================
+
+.. sourcecode:: python
+
+    from datetime import datetime
+
+    from django.contrib.auth.models import User
+    from django.db import models
+    from django.utils.translation import ugettext_lazy as _
+    
+    class Post(models.Model):
+    
+        author = models.ForeignKey(User)
+        title = models.CharField(_('Title'), max_length=100)
+        content = models.TextField(_("Content"))
+        pub_date = models.DateTimeField(_("Publication date"))
+        
+    class Comment(models.Model):
+        post = models.ForeignKey(Post)
+        name = models.CharField(_('Title'), max_length=100)
+        content = models.TextField(_("Content"))
+        
+Persist NoSQL
+=============
+
+.. sourcecode:: python
+
+    from django.utils.translation import ugettext_lazy as _
+
+    import mongoengine as me
+    
+    class User(me.Document):
+        email = me.StringField(_('email'), required=True)
+        first_name = me.StringField(_('first name'), max_length=30)
+        last_name = me.StringField(_('last name'), max_length=30)    
+        
+    class Post(me.Document):
+        title = me.StringField(_('title'), max_length=100, required=True)
+        author = me.ReferenceField(User)
+        content = me.StringField(_('content'), )
+
+    class Comment(me.EmbeddedDocument):
+        name = me.StringField(_('name'), max_length=100)    
+        content = me.StringField(_('content'))

@@ -125,3 +125,8 @@ Slides TOC
     * Connect to NoSQL
     
 #. Build websites
+
+#. Internationalize
+
+    * unicode
+    * gettext implementation
