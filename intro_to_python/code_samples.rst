@@ -532,19 +532,19 @@ Work with JSON
     >>> data = {
         'name':'Daniel Greenfeld',
         'nickname':'pydanny',
-        'states_lived':['CA','KS','MD','NJ','VA','DA'],
+        'states_lived':['CA','KS','MD','NJ','VA','AD'],
         'fiancee':'Audrey Roy'
         }
     >>> type(data)
     <type 'dict'>
     >>> payload = json.dumps(data)
     >>> payload
-    '{"fiancee": "Audrey Roy", "nickname": "pydanny", "name": "Daniel Greenfeld", "states_lived": ["CA", "KS", "MD", "NJ", "VA", "DA"]}'
+    '{"fiancee": "Audrey Roy", "nickname": "pydanny", "name": "Daniel Greenfeld", "states_lived": ["CA", "KS", "MD", "NJ", "VA", "AD"]}'
     >>> type(payload)
     <type 'str'>
     >>> restored = json.loads(payload)
     >>> restored
     <type 'dict'>
     >>> restored
-    {u'fiancee': u'Audrey Roy', u'nickname': u'pydanny', u'name': u'Daniel Greenfeld', u'states_lived': [u'CA', u'KS', u'MD', u'NJ', u'VA'
+    {u'fiancee': u'Audrey Roy', u'nickname': u'pydanny', u'name': u'Daniel Greenfeld', u'states_lived': [u'CA', u'KS', u'MD', u'NJ', u'VA', u'AD'
     ]}
