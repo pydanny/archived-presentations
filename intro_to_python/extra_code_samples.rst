@@ -33,9 +33,11 @@ Lists + functional programming
 
     >>> def divisible_by_2(x):
     ...    return x % 2 == 0
+    ...
     >>>
     >>> def cube(x):
     ...    return x ** 3
+    ...    
     >>>
     >>> numbers = [1, 2, 3, 4, 6, 31]
     >>>
