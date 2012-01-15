@@ -491,3 +491,30 @@ Do things with Strings
     False
     >>> 'Linux' in scale
     True
+    
+Basics
+========
+
+.. sourcecode:: python
+
+    >>> x, y, z = 5, 10, 15
+    >>> 5 < 10
+    True
+    >>> 5 > 10
+    False
+    >>> True == False
+    False
+    >>> (5 == x) or (10 == x)
+    True
+    >>> (5 == x) and (10 == x)
+    False
+    >>> x + y - z
+    0    
+    >>> 10 * 5
+    50
+    >>> 10 / 5
+    2
+    >>> 10 + 5
+    15
+    >>> 10 ** 2
+    100    
