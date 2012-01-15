@@ -578,3 +578,31 @@ Work with JSON
     >>> restored
     {u'fiancee': u'Audrey Roy', u'nickname': u'pydanny', u'name': u'Daniel Greenfeld', u'states_lived': [u'CA', u'KS', u'MD', u'NJ', u'VA', u'AD'
     ]}
+    
+Object-Oriented Programming
+============================
+
+.. sourcecode::
+
+    class Animal(object):
+        def __init__(self, name):    # Constructor of the class
+            self.name = name
+        def talk(self):              # Abstract method, defined by convention only
+            raise NotImplementedError("Subclass must implement abstract method")
+ 
+    class Cat(Animal):
+        def talk(self):
+            return 'Meow!'
+ 
+    class Dog(Animal):
+        def talk(self):
+            return 'Woof! Woof!'
+ 
+    animals = [Cat('Missy'),
+               Cat('Mr. Mistoffelees'),
+               Dog('Lassie')]
+ 
+    for animal in animals:
+        print animal.name + ': ' + animal.talk()
+        
+* http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming#Examples
