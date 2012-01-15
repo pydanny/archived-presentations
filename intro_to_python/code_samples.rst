@@ -470,10 +470,17 @@ Do things with Strings
     'Southern'
     >>> scale[:-11]
     'Southern California Linux'
+    >>> scale[0:8] = 'Northern'
+    Traceback (most recent call last):
+      File "<input>", line 1, in <module>
+    TypeError: 'str' object does not support item assignment    
     >>> scale.replace('Southern California','SoCal')
     'SoCal Linux Exposition'
     >>> scale 
     'Southern California Linux Exposition'
+    >>> s = scale.replace('Southern California','SoCal')
+    >>> s
+    'SoCal California Linux Exposition'
     >>> scale.startswith('Windows')
     False
     >>> scale.endswith('Windows')
