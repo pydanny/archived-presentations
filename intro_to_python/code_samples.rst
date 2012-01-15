@@ -457,3 +457,30 @@ Generators
     7
 
 * http://www.dabeaz.com/generators/Generators.pdf
+
+Do things with Strings
+========================
+
+.. sourcecode:: python
+
+    >>> scale = 'Southern California Linux Exposition'
+    >>> scale[0]
+    'S'
+    >>> scale[0:8]
+    'Southern'
+    >>> scale[:-11]
+    'Southern California Linux'
+    >>> scale.replace('Southern California','SoCal')
+    'SoCal Linux Exposition'
+    >>> scale 
+    'Southern California Linux Exposition'
+    >>> scale.startswith('Windows')
+    False
+    >>> scale.endswith('Windows')
+    False
+    >>> scale.startswith('Southern')
+    True
+    >>> 'Windows' in scale
+    False
+    >>> 'Linux' in scale
+    True
