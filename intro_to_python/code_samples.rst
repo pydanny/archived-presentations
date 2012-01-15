@@ -153,6 +153,8 @@ code::
 Play with strings
 =================
 
+Strings are immutable
+
 sourcecode:: python
 
     >>> a = "I"
@@ -169,15 +171,34 @@ sourcecode:: python
     ['I', 'like', 'Python']
     >>> " ".join(lst)
     'I like Python'
-    >>> my_set, tpl = set(lst), tuple(lst)
-    >>> tpl
-    ('I', 'like', 'Python')
-    >>> my_set
-    set(['I', 'Python', 'like'])
-    >>> ">".join(tpl)
-    'I>like>Python'
-    >>> "!".join(my_set)
-    'I!Python!like'
+    
+Diving into lists
+=================
+
+.. sourcecode:: python 
+
+    lst = [1,2,3,4,5,"Python", [1,2,3,4]]
+    
+Sets dominate
+===============
+
+.. sourcecode:: python 
+
+    >>> lst = [1,1,1,1,1,2,2,2,3,3,3,3,3,3]
+    >>> s = set(lst)
+    >>> s
+    set([1,2,3])
+
+How is this useful? What about counting unique words in a paragraph?
+
+    >>> address = """Four score and seven years ago our fathers brought forth on this continent a new nation..."""
+    >>> address = address.replace(',','').replace('.','').replace('-','')
+    >>> words = address.split(' ')
+    >>> len(words)
+    278
+    >>> unique_words = set(words)
+    >>> len(unique_words)
+    143
 
 List Comprehension
 ====================
