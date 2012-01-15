@@ -604,5 +604,11 @@ Object-Oriented Programming
  
     for animal in animals:
         print animal.name + ': ' + animal.talk()
-        
+
+output::
+
+    Missy: Meow!
+    Mr. Mistoffelees: Meow!
+    Lassie: Woof! Woof!
+
 * http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming#Examples
