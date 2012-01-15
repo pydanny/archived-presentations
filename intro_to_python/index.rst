@@ -22,3 +22,4 @@ Contents:
    
    slides
    code_samples
+   extra_code_samples
