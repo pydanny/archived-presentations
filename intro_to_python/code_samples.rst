@@ -396,15 +396,20 @@ Exception Handling
 
 .. sourcecode:: python
 
+    >>> import logging
+    >>> logger = logging.getlogger()
+    >>>
     >>> class CustomTypeError(Exception):
     ...     pass
         
     >>> try:
     ...     a = 1 + "Error"
     >>> except TypeError as e:
-    ...     raise CustomTypeError(e.message)
+    ...     raise CustomTypeError(e)
+    >>> except Exception as e:
+    ...     logger.error(e)
+        
     Traceback (most recent call last):
       File "<stdin>", line 4, in <module>
     __main__.CustomTypeError: unsupported operand type(s) for +: 'int' and 'str'
         
-    
