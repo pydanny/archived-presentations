@@ -375,4 +375,5 @@ dependencies::
         for product in Product.objects.all():
             response = request.get(product.medium_image.url)
             if response.status_code != 200:
-                logging.warning("Product {0} missing image".format(product.id))
+                msg = "Product {0} missing image".format(product.id)
+                logging.warning(msg)
