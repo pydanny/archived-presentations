@@ -3,7 +3,7 @@ You're going to enjoy lists.
 Basic list operations
 =====================
 
-sourcecode:: python
+.. sourcecode:: python
 
     >>> my_list = [1, 2, 3]
     >>> my_list.append(4)
@@ -29,26 +29,26 @@ sourcecode:: python
 Lists + functional programming
 ==============================
 
-sourcecode:: python
+.. sourcecode:: python
 
-    def divisible_by_2(x):
-        return x % 2 == 0
-
-    def cube(x):
-        return x * x * x
-
+    >>> def divisible_by_2(x):
+    ...    return x % 2 == 0
+    >>>
+    >>> def cube(x):
+    ...    return x ** 3
+    >>>
     >>> numbers = [1, 2, 3, 4, 6, 31]
-
+    >>>
     >>> filter(divisible_by_2, numbers)
     >>> [2, 4, 6]
-    
+    >>>
     >>> map(cube, numbers)
     >>> [1, 8, 27, 64, 216, 29791]
 
 Generators
 ==========
 
-sourcecode:: python
+.. sourcecode:: python
 
     def print_5_lines(filename):
         """ Prints the first 5 lines of the given file. """
@@ -64,7 +64,7 @@ Filesystem tools
 
 List all the .log files in a directory, including all subdirectories.
 
-sourcecode:: python
+.. sourcecode:: python
 
     import os
     import os.path
@@ -80,7 +80,7 @@ Dealing with tarfiles
 
 Open and read nested tarfiles, without having to write the extracted files to disk.
 
-sourcecode:: python
+.. sourcecode:: python
 
     >>> import tarfile
     >>> baz = tarfile.open('baz.tgz')

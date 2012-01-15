@@ -157,18 +157,18 @@ Strings are immutable
 
 sourcecode:: python
 
-    >>> a = "I"
-    >>> b = "like"
-    >>> c = "Python"
+    >>> a = "Daniel"
+    >>> b = "Adam"
+    >>> c = "Greenfeld"
     >>> a + b + c
-    'IlikePython'
+    'DanielAdamGreenfeld'
     >>> "{0} {1} {2}".format(a, b, c)
-    'I like Python'
-    >>> "{a} {b} {c}".format(a=a, b=b, c=c)
-    'I like Python'
+    'Daniel Adam Greenfeld'
+    >>> "{first} {middle} {last}".format(first=a, middle=b, last=c)
+    'Daniel Adam Greenfeld'
     >>> lst = [a,b,c]
     >>> lst
-    ['I', 'like', 'Python']
+    ['Daniel', 'Adam', 'Greenfeld']
     >>> " ".join(lst)
     'I like Python'
     
@@ -314,10 +314,8 @@ More code::
     (my_env) $ pip install requests==0.9.1
     (my_env) $ pip install mongoengine==0.5.2
     (my_env) $ pip install celery==2.4.6
-    (my_env) $ pip install coverage==3.4
     (my_env) $ pip freeze
     celery==2.4.6
-    coverage==3.4
     django==1.3.1
     mongoengine==0.5.2
     requests==0.9.1
