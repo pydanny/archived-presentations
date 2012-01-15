@@ -385,4 +385,8 @@ Shell:
 .. sourcecode:: python
 
     >>> from products.tasks import confirm_all_images
-    confirm_all_images.delay()
+    >>> result = confirm_all_images.delay()
+    >>> result.ready()
+    False
+    >>> result.ready()
+    True
