@@ -350,3 +350,29 @@ Persist NoSQL
     class Comment(me.EmbeddedDocument):
         name = me.StringField(_('name'), max_length=100)    
         content = me.StringField(_('content'))
+        
+Message Queues
+===============
+
+dependencies::
+
+    celery
+    requests
+
+.. sourcecode:: python
+
+    import logging
+    import requests
+    from celery import task
+    
+    from products.models import Product
+    
+    logger = logging.getLogger('products.tasks')
+    
+    @task
+    def check_all_images():
+    
+        for product in Product.objects.all():
+            response = request.get(product.medium_image.url)
+            if response.status_code != 200:
+                logging.warning("Product {0} missing image".format(product.id))
