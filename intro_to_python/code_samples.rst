@@ -344,7 +344,8 @@ Persist NoSQL
     class Post(me.Document):
         title = me.StringField(_('title'), max_length=100, required=True)
         author = me.ReferenceField(User)
-        content = me.StringField(_('content'), )
+        content = me.StringField(_('content'))
+        pub_date = me.DateTimeField(_("Publication date"))
 
     class Comment(me.EmbeddedDocument):
         name = me.StringField(_('name'), max_length=100)    
