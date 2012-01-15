@@ -192,7 +192,8 @@ Sets dominate
 How is this useful? What about counting unique words in a paragraph?
 
     >>> address = """Four score and seven years ago our fathers brought forth on this continent a new nation..."""
-    >>> address = address.replace(',','').replace('.','').replace('-','')
+    >>> for r in [',','.','-']:
+    ...     address = address.replace(r,'')
     >>> words = address.split(' ')
     >>> len(words)
     278
@@ -246,13 +247,12 @@ Generator Expressions
     >>> items
     <generator object <genexpr> at 0x100721460>
     
-A generator expression evaluates only when the pointer is looking at that object.
-This is really powerful, especially when working with resource/time intensive items
-within an iterable.
+In Python, a generator can be thought of as an iterator that contains a frozen stack frame. Whenever the iterator's next() method is called, Python resumes the frozen frame, which executes normally until the next yield statement is reached. The generator's frame is then frozen again, and the yielded value is returned to the caller.
 
 .. sourcecode:: python
 
-    >>> from time import sleep
+    >>> f = file('billion_rows.txt','r')
+    >>> 
     >>> items = ((x, sleep(x)) for x in range(20))
     >>> items.next()
     (0, None)
