@@ -359,6 +359,7 @@ dependencies::
     celery
     requests
 
+tasks.py
 .. sourcecode:: python
 
     import logging
@@ -370,10 +371,16 @@ dependencies::
     logger = logging.getLogger('products.tasks')
     
     @task
-    def check_all_images():
+    def confirm_all_images():
     
         for product in Product.objects.all():
             response = request.get(product.medium_image.url)
             if response.status_code != 200:
                 msg = "Product {0} missing image".format(product.id)
                 logging.warning(msg)
+
+Shell:
+.. sourcecode:: python
+
+    >>> from products.tasks import confirm_all_images
+    confirm_all_images.delay()
