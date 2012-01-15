@@ -432,3 +432,25 @@ Exception Handling
       File "<stdin>", line 4, in <module>
     __main__.CustomTypeError: unsupported operand type(s) for +: 'int' and 'str'
         
+Generators
+============
+
+.. sourcecode:: python
+
+    from itertools import count
+ 
+    def generate_primes(stop_at=0):
+        primes = []
+        for n in count(2):
+            if 0 < stop_at < n:
+                return # raises the StopIteration exception
+            composite = False
+            for p in primes:
+                if not n % p:
+                    composite = True
+                    break
+                elif p ** 2 > n: 
+                    break
+            if not composite:
+                primes.append(n)
+                yield n
