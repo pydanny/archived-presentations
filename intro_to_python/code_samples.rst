@@ -622,5 +622,13 @@ example::
     Python 2.7.1+ (r271:86832, Apr 11 2011, 18:13:53) 
     [GCC 4.5.2] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
+    
+python:
+
+.. sourcecode:: python
+
     >>> 3 + 4
     7
+    >>> a = 5 * 10
+    >>> a
+    50
