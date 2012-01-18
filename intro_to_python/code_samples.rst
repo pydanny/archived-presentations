@@ -251,17 +251,10 @@ In Python, a generator can be thought of as an iterator that contains a frozen s
 
 .. sourcecode:: python
 
-    >>> f = file('billion_rows.txt','r')
-    >>> 
-    >>> items = ((x, sleep(x)) for x in range(20))
-    >>> items.next()
-    (0, None)
-    >>> items.next()
-    (1, None)
-    >>> items.next()
-    (2, None)
-    >>> items.next()            
-    (3, None)
+    wwwlog     = open("access-log")
+    bytecolumn = (line.rsplit(None,1)[1] for line in wwwlog)
+    bytes      = (int(x) for x in bytecolumn if x != '-')
+    print "Total", sum(bytes
 
 Pygments
 =========
