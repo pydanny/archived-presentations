@@ -639,19 +639,13 @@ python:
     7
     >>> add('Py','thon')
     'Python'
-    >>> for x in 'Hello, World':
+    >>> for x in 'Python':
     ...     print x
     ... 
-    H
-    e
-    l
-    l
+    P
+    y
+    t
+    h
     o
-    ,
-
-    W
-    o
-    r
-    l
-    d
+    n
     >>>
