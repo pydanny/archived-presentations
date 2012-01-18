@@ -251,10 +251,22 @@ In Python, a generator can be thought of as an iterator that contains a frozen s
 
 .. sourcecode:: python
 
+    # loop way
+    wwwlog = open("access-log")
+    total = 0
+    for line in wwwlog:
+        bytestr = line.rsplit(None,1)[1]
+        if bytestr != '-':
+            total += int(bytestr)
+    print "Total", total
+    
+.. sourcecode:: python    
+
+    # generator expressions way
     wwwlog     = open("access-log")
     bytecolumn = (line.rsplit(None,1)[1] for line in wwwlog)
     bytes      = (int(x) for x in bytecolumn if x != '-')
-    print "Total", sum(bytes
+    print "Total", sum(bytes)
 
 Pygments
 =========
