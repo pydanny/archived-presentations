@@ -632,3 +632,26 @@ python:
     >>> a = 5 * 10
     >>> a
     50
+    >>> def add(a, b):
+    ...     return a + b
+    ... 
+    >>> add(3,4)
+    7
+    >>> add('Py','thon')
+    'Python'
+    >>> for x in 'Hello, World':
+    ...     print x
+    ... 
+    H
+    e
+    l
+    l
+    o
+    ,
+
+    W
+    o
+    r
+    l
+    d
+    >>>
