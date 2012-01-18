@@ -612,3 +612,15 @@ output::
     Lassie: Woof! Woof!
 
 * http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming#Examples
+
+REPL
+====
+
+example::
+
+    $ python
+    Python 2.7.1+ (r271:86832, Apr 11 2011, 18:13:53) 
+    [GCC 4.5.2] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> 3 + 4
+    7
