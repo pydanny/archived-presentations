@@ -1,7 +1,11 @@
-You're going to enjoy lists.
+===================
+Extra Code Samples
+===================
 
 Basic list operations
 =====================
+
+You're going to enjoy lists.
 
 .. sourcecode:: python
 
