@@ -1,4 +1,4 @@
-.. sourcecode:: MakeFile
+.. sourcecode:: Makefile
 
     # Some helpful utility commands.
 
