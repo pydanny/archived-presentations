@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
    
    intro_to_python/index
+   heroku-case-study/index
 
 Indices and tables
 ==================
