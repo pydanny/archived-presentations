@@ -1,3 +1,7 @@
+============
+Code Samples
+============
+
 .. sourcecode:: Makefile
 
     # Some helpful utility commands.
