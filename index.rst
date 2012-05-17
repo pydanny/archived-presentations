@@ -84,4 +84,13 @@ MongoEngine Model Example
     >>> from reviews.models import Review
     >>> for review in Review.objects.all():
     ...     review.title
-    
+
+
+PyMongo Query Example
+=======================
+
+.. parsed-literal::
+
+    >>> connection = pymongo.Connection()
+    >>> db = connection.db
+    >>> db.review.find({'rating': 3})
