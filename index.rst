@@ -13,37 +13,8 @@ Contents:
    
    intro_to_python/index
    heroku-case-study/index
-   
-.. code-block:: python
 
-    class BaseMongoModel(dict):
-        """ Smells like a dict but is instantiated like a class.
-             Used as the superclass on pymongo Model types
-             Default fields:
 
-                 _id: object_id
-                 created: datetime()
-                 modified: datetime()
-         """    
-
-        def __init__(self, **kwargs):
-            """ Checks to make sure all necessary fields are there. Also assigns some critical defaults """
-
-            if 'modified' not in self and 'modified' not in kwargs:
-                self['modified'] = datetime.now()
-
-            # make that created field now
-            if 'created' not in self and 'created' not in kwargs:
-                self['created'] = datetime.now()
-
-            if '_id' in kwargs and not isinstance(kwargs['_id'], ObjectId):
-                raise InvalidObjectId
-
-            if '_id' in kwargs:
-                self['pk'] = str(kwargs['_id'])
-                self['id'] = str(kwargs['_id'])
-            self.update(kwargs)
-            
 List of Dictionaries
 =====================
             
