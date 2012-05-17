@@ -36,7 +36,6 @@ MongoKit Model Example
 .. code-block:: python
 
     from mongokit import Document, Connection
-    import datetime
 
     connection = Connection()
 
@@ -50,7 +49,7 @@ MongoKit Model Example
                 'rating':int
         }
         required_fields = ['title', 'author', 'created']
-        default_values = {'rating':0, 'created':datetime.datetime.utcnow}
+        default_values = {'rating': 0, 'created': datetime.utcnow}
                        
 MongoKit Query Example
 ======================
@@ -59,5 +58,30 @@ MongoKit Query Example
     
     >>> from mongokit import Connection
     >>> connection = Connection()
-    >>> for post in connection.Review.find():
-    ...     print post['title']    
+    >>> for review in connection.Review.find({'rating': 3}):
+    ...     review['title']    
+    
+MongoEngine Model Example
+===========================
+
+.. code-block:: python
+
+    import mongoengine as me
+
+    class Review(me.Document):
+
+        title = me.StringField()
+        body = me.StringField()
+        author = me.StringField()
+        created = me.DateTimeField(default=datetime.utcnow)
+        rating = me.IntField()
+
+MongoEngine Model Example
+=========================
+
+.. code-block:: python
+
+    >>> from reviews.models import Review
+    >>> for review in Review.objects.all():
+    ...     review.title
+    
