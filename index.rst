@@ -76,7 +76,7 @@ MongoEngine Model Example
         created = me.DateTimeField(default=datetime.utcnow)
         rating = me.IntField()
 
-MongoEngine Model Example
+MongoEngine Query Example
 =========================
 
 .. code-block:: python
@@ -84,7 +84,18 @@ MongoEngine Model Example
     >>> from reviews.models import Review
     >>> for review in Review.objects.all():
     ...     review.title
+    
+PyMongo Model Example    
+======================
 
+.. code-block:: python
+
+    >>> from pymongo import Connection
+    >>> connection = Connection()
+    >>> my_data = {'rating': 3, 'title': 'I like ice cream'}
+    >>> connection.reviews.insert(my_data)
+    >>> your_data = {'rating': 3, 'name': 'You like ice cream'}
+    >>> connection.reviews.insert(your_data)
 
 PyMongo Query Example
 =======================
@@ -93,4 +104,7 @@ PyMongo Query Example
 
     >>> connection = pymongo.Connection()
     >>> db = connection.db
-    >>> db.review.find({'rating': 3})
+    >>> for review in db.reviews.find({'rating': 3}):
+    ...     review['title']
+    >>> for review in db.reviews.find({"title": {"$regex": "ice cream"} }):
+    ...     review['title']
