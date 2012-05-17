@@ -71,9 +71,6 @@ MongoKit Model Example
 
     @connection.register
     class Review(Document):
-        __collection__ = 'reviews'
-        __database__ = 'cn'    
-        use_schemaless = True
         structure = {
                 'title':unicode,
                 'body':unicode,
