@@ -59,25 +59,37 @@ List of Dictionaries
     collection = [document]  # JavaScript version. :-)
     
     
-MongoKit Example
-================
+MongoKit Model Example
+======================
 
 .. code-block:: python
 
-    from mongokit import *
+    from mongokit import Document, Connection
     import datetime
 
     connection = Connection()
 
     @connection.register
-    class BlogPost(Document):
+    class Review(Document):
+        __collection__ = 'reviews'
+        __database__ = 'cn'    
+        use_schemaless = True
         structure = {
                 'title':unicode,
                 'body':unicode,
                 'author':unicode,
-                'date_creation':datetime.datetime,
-                'rank':int
+                'created':datetime.datetime,
+                'rating':int
         }
-        required_fields = ['title','author', 'date_creation']
-        default_values = {'rank':0, 
-                       'date_creation':datetime.datetime.utcnow}
+        required_fields = ['title', 'author', 'created']
+        default_values = {'rating':0, 'created':datetime.datetime.utcnow}
+                       
+MongoKit Query Example
+======================
+
+.. code-block:: python
+    
+    >>> from mongokit import Connection
+    >>> connection = Connection()
+    >>> for post in connection.Review.find():
+    ...     print post['title']    
