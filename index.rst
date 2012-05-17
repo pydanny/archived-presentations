@@ -102,6 +102,13 @@ PyMongo Query Example
 
 .. parsed-literal::
 
+    [
+        {'rating': 3,'title': 'I like ice cream'},
+        {'rating': 3, 'name': 'You like ice cream'}
+    ]
+
+.. parsed-literal::
+
     >>> connection = pymongo.Connection()
     >>> db = connection.db
     >>> for review in db.reviews.find({'rating': 3}):
