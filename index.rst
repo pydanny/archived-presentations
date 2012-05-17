@@ -106,5 +106,7 @@ PyMongo Query Example
     >>> db = connection.db
     >>> for review in db.reviews.find({'rating': 3}):
     ...     review['title']
-    >>> for review in db.reviews.find({"title": {"$regex": "ice cream"} }):
+    >>> for review in db.reviews.find(
+    ...        {"title": {"$regex": "ice cream"} }
+    ...        ):
     ...     review['title']
