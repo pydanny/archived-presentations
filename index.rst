@@ -44,6 +44,9 @@ Contents:
                 self['id'] = str(kwargs['_id'])
             self.update(kwargs)
             
+List of Dictionaries
+=====================
+            
 .. code-block:: python
 
     collection = []
@@ -55,3 +58,26 @@ Contents:
     collection = [document, ]
     collection = [document]  # JavaScript version. :-)
     
+    
+MongoKit Example
+================
+
+.. code-block:: python
+
+    from mongokit import *
+    import datetime
+
+    connection = Connection()
+
+    @connection.register
+    class BlogPost(Document):
+        structure = {
+                'title':unicode,
+                'body':unicode,
+                'author':unicode,
+                'date_creation':datetime.datetime,
+                'rank':int
+        }
+        required_fields = ['title','author', 'date_creation']
+        default_values = {'rank':0, 
+                       'date_creation':datetime.datetime.utcnow}
